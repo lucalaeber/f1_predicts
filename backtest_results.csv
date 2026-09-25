@@ -1,0 +1,15 @@
+Year,Round,EventName,predicted_winner,predicted_prob,actual_winner,correct,top3_hit,actual_winner_rank,prob_assigned_to_actual_winner
+2026,1,Australian Grand Prix,RUS,0.918,RUS,True,True,1,0.918
+2026,2,Chinese Grand Prix,ANT,0.671,ANT,True,True,1,0.671
+2026,3,Japanese Grand Prix,ANT,0.968,ANT,True,True,1,0.968
+2026,4,Miami Grand Prix,ANT,0.829,ANT,True,True,1,0.829
+2026,5,Canadian Grand Prix,RUS,0.88,ANT,False,True,2,0.109
+2026,6,Monaco Grand Prix,ANT,0.909,ANT,True,True,1,0.909
+2026,7,Barcelona Grand Prix,RUS,0.629,HAM,False,True,2,0.193
+2026,8,Austrian Grand Prix,RUS,0.799,RUS,True,True,1,0.799
+2026,9,British Grand Prix,ANT,0.965,LEC,False,True,3,0.013
+2026,10,Belgian Grand Prix,VER,0.669,ANT,False,True,2,0.119
+2026,11,Hungarian Grand Prix,VER,0.439,NOR,False,True,2,0.417
+2026,12,Dutch Grand Prix,NOR,0.924,NOR,True,True,1,0.924
+2026,13,Italian Grand Prix,GAS,0.629,ANT,False,False,5,0.026
+2026,14,Spanish Grand Prix,NOR,0.545,ANT,False,True,3,0.118

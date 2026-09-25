@@ -1,0 +1,23 @@
+Abbreviation,TeamName,GridPosition,win_prob_pct,grid_is_estimated
+ANT,Mercedes,6.4,28.0,True
+LEC,Ferrari,4.0,26.8,True
+HAM,Ferrari,4.6,15.0,True
+NOR,McLaren,4.8,8.8,True
+VER,Red Bull Racing,4.2,7.8,True
+PIA,McLaren,5.2,7.6,True
+RUS,Mercedes,3.8,5.2,True
+LIN,Racing Bulls,9.0,0.2,True
+LAW,Red Bull Racing,11.6,0.1,True
+GAS,Alpine,9.6,0.1,True
+COL,Alpine,10.8,0.1,True
+TSU,Racing Bulls,13.4,0.0,True
+BOR,Audi,10.6,0.0,True
+HUL,Audi,11.6,0.0,True
+OCO,Haas F1 Team,14.6,0.0,True
+BEA,Haas F1 Team,16.8,0.0,True
+SAI,Williams,17.4,0.0,True
+ALO,Aston Martin,18.8,0.0,True
+ALB,Williams,17.2,0.0,True
+BOT,Cadillac,18.8,0.0,True
+PER,Cadillac,19.4,0.0,True
+STR,Aston Martin,19.6,0.0,True
