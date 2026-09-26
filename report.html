@@ -392,18 +392,18 @@
     <div class="eyebrow">Azerbaijan GP &middot; Baku City Circuit &middot; model favorite</div>
     <div class="board-main">
       <div class="board-pos">P1</div>
-      <div class="board-driver">ANT</div>
+      <div class="board-driver">RUS</div>
       <div class="board-side">
-        <div class="team">Mercedes</div>
+        <div class="team">Mercedes &middot; starting P1</div>
         <div class="prob-label">Win probability</div>
-        <div class="prob">28.0%</div>
+        <div class="prob">49.8%</div>
       </div>
     </div>
     <div class="board-runners">
-      <div class="board-runner"><span class="rk">P2</span><span class="drv">LEC</span><span class="pc">26.8%</span></div>
-      <div class="board-runner"><span class="rk">P3</span><span class="drv">HAM</span><span class="pc">15.0%</span></div>
-      <div class="board-runner"><span class="rk">P4</span><span class="drv">NOR</span><span class="pc">8.8%</span></div>
-      <div class="board-runner"><span class="rk">P5</span><span class="drv">VER</span><span class="pc">7.8%</span></div>
+      <div class="board-runner"><span class="rk">P2</span><span class="drv">LEC</span><span class="pc">26.4%</span></div>
+      <div class="board-runner"><span class="rk">P3</span><span class="drv">ANT</span><span class="pc">10.8%</span></div>
+      <div class="board-runner"><span class="rk">P4</span><span class="drv">HAD</span><span class="pc">3.9%</span></div>
+      <div class="board-runner"><span class="rk">P5</span><span class="drv">PIA</span><span class="pc">3.5%</span></div>
     </div>
   </div>
 
@@ -451,7 +451,7 @@
       <div class="bars" id="baku-bars"></div>
       <div class="longshots-head">Long shots &mdash; under 1%</div>
       <div class="chip-grid" id="baku-chips"></div>
-      <div class="chart-foot">Qualifying for this race hadn't run when these were generated, so grid position is estimated from each driver's recent average &mdash; re-run <code>predict.py</code> after qualifying for grid-accurate numbers.</div>
+      <div class="chart-foot">Grid positions are Saturday's actual qualifying result.</div>
     </div>
   </section>
 
@@ -485,27 +485,27 @@
 
 <script>
   const bakuDrivers = [
-    {driver:"ANT", team:"Mercedes", prob:28.0},
-    {driver:"LEC", team:"Ferrari", prob:26.8},
-    {driver:"HAM", team:"Ferrari", prob:15.0},
-    {driver:"NOR", team:"McLaren", prob:8.8},
-    {driver:"VER", team:"Red Bull Racing", prob:7.8},
-    {driver:"PIA", team:"McLaren", prob:7.6},
-    {driver:"RUS", team:"Mercedes", prob:5.2},
-    {driver:"LIN", team:"Racing Bulls", prob:0.2},
-    {driver:"LAW", team:"Red Bull Racing", prob:0.1},
+    {driver:"RUS", team:"Mercedes", prob:49.8},
+    {driver:"LEC", team:"Ferrari", prob:26.4},
+    {driver:"ANT", team:"Mercedes", prob:10.8},
+    {driver:"HAD", team:"Red Bull Racing", prob:3.9},
+    {driver:"PIA", team:"McLaren", prob:3.5},
+    {driver:"NOR", team:"McLaren", prob:2.9},
+    {driver:"HAM", team:"Ferrari", prob:1.9},
+    {driver:"VER", team:"Red Bull Racing", prob:0.6},
     {driver:"GAS", team:"Alpine", prob:0.1},
-    {driver:"COL", team:"Alpine", prob:0.1},
-    {driver:"TSU", team:"Racing Bulls", prob:0.0},
-    {driver:"BOR", team:"Audi", prob:0.0},
-    {driver:"HUL", team:"Audi", prob:0.0},
-    {driver:"OCO", team:"Haas F1 Team", prob:0.0},
-    {driver:"BEA", team:"Haas F1 Team", prob:0.0},
+    {driver:"LAW", team:"Racing Bulls", prob:0.0},
+    {driver:"COL", team:"Alpine", prob:0.0},
+    {driver:"LIN", team:"Racing Bulls", prob:0.0},
     {driver:"SAI", team:"Williams", prob:0.0},
-    {driver:"ALO", team:"Aston Martin", prob:0.0},
+    {driver:"BEA", team:"Haas F1 Team", prob:0.0},
+    {driver:"OCO", team:"Haas F1 Team", prob:0.0},
     {driver:"ALB", team:"Williams", prob:0.0},
-    {driver:"BOT", team:"Cadillac", prob:0.0},
+    {driver:"HUL", team:"Audi", prob:0.0},
+    {driver:"BOR", team:"Audi", prob:0.0},
+    {driver:"ALO", team:"Aston Martin", prob:0.0},
     {driver:"PER", team:"Cadillac", prob:0.0},
+    {driver:"BOT", team:"Cadillac", prob:0.0},
     {driver:"STR", team:"Aston Martin", prob:0.0},
   ];
 

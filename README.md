@@ -59,7 +59,7 @@ generated — it doesn't re-fetch anything. After rerunning `backtest.py` /
 of the file with the new CSV rows (or regenerate the whole file with your own
 script) to keep it in sync.
 
-## Current results (2026 season, run 2026-09-25)
+## Current results (2026 season, run 2026-09-26)
 
 Backtesting all 14 completed 2026 races (expanding window, retrained per race):
 
@@ -73,22 +73,24 @@ Backtesting all 14 completed 2026 races (expanding window, retrained per race):
 
 See `backtest_results.csv` for the full predicted-vs-actual table.
 
-Predicted win probabilities for the **Azerbaijan Grand Prix (Baku), Round 15**
-(qualifying hadn't run yet at prediction time, so grid positions are
-estimated from recent form — see `grid_is_estimated` column):
+Predicted win probabilities for the **Azerbaijan Grand Prix (Baku), Round 15**,
+using Saturday's actual qualifying grid:
 
-| Driver | Team | Win probability |
-|---|---|---|
-| ANT | Mercedes | 28.0% |
-| LEC | Ferrari | 26.8% |
-| HAM | Ferrari | 15.0% |
-| NOR | McLaren | 8.8% |
-| VER | Red Bull Racing | 7.8% |
-| PIA | McLaren | 7.6% |
-| RUS | Mercedes | 5.2% |
+| Driver | Team | Grid | Win probability |
+|---|---|---|---|
+| RUS | Mercedes | P1 | 49.8% |
+| LEC | Ferrari | P2 | 26.4% |
+| ANT | Mercedes | P16 | 10.8% |
+| HAD | Red Bull Racing | P4 | 3.9% |
+| PIA | McLaren | P3 | 3.5% |
+| NOR | McLaren | P5 | 2.9% |
+| HAM | Ferrari | P6 | 1.9% |
 
-Full table in `next_race_predictions.csv`. Re-run `predict.py` after
-qualifying to get grid-accurate probabilities.
+Full table in `next_race_predictions.csv`. An earlier run made before
+qualifying had ANT as the 28% favorite from an estimated grid — his actual
+P16 qualifying result dropped him to 10.8%, and pole-sitter RUS jumped from
+5.2% to 49.8%, a reminder of how much weight the model puts on grid
+position.
 
 ## Notes / limitations
 

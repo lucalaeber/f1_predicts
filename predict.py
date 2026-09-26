@@ -10,19 +10,24 @@ import pandas as pd
 import fastf1
 
 from data_loader import (get_driver_standings_before_round, get_schedule,
-                          load_all_data, load_quali_results)
+                          load_all_data, load_quali_results, load_race_results)
 from features import FEATURE_COLUMNS, build_feature_table
 from model import predict_win_probabilities, train_ranker
 
 
 def get_next_round(year: int) -> int:
+    """First round with no race result yet — i.e. the next race to predict.
+
+    Deliberately not date-based: on race day itself (or with timezone
+    mismatches), comparing the event *date* to "now" can skip past a round
+    whose qualifying has already run but whose race hasn't. Checking for an
+    actual missing result is unambiguous.
+    """
     sched = get_schedule(year)
-    now = pd.Timestamp.utcnow().tz_localize(None)
-    dates = pd.to_datetime(sched["EventDate"]).dt.tz_localize(None)
-    upcoming = sched[dates >= now]
-    if upcoming.empty:
-        raise RuntimeError(f"No upcoming rounds found for {year}")
-    return int(upcoming.iloc[0]["RoundNumber"])
+    for rnd in sorted(int(r) for r in sched["RoundNumber"] if r > 0):
+        if load_race_results(year, rnd) is None:
+            return rnd
+    raise RuntimeError(f"No upcoming rounds found for {year} — season appears complete.")
 
 
 def get_entry_list(year: int, round_number: int) -> pd.DataFrame:
@@ -39,12 +44,15 @@ def get_entry_list(year: int, round_number: int) -> pd.DataFrame:
         return entries[["Abbreviation", "TeamName", "GridPosition", "grid_is_estimated"]]
 
     # fall back: most recent completed race's entry list
-    from data_loader import get_completed_rounds, load_race_results
+    from data_loader import get_completed_rounds
     completed = get_completed_rounds(year)
-    last_round = completed[-1] if completed else None
-    if last_round is None:
+    last_race = None
+    for rnd in reversed(completed):
+        last_race = load_race_results(year, rnd)
+        if last_race is not None:
+            break
+    if last_race is None:
         raise RuntimeError("No completed race to source an entry list from.")
-    last_race = load_race_results(year, last_round)
     entries = last_race[["Abbreviation", "TeamName"]].drop_duplicates().reset_index(drop=True)
     entries["GridPosition"] = np.nan  # filled from rolling avg grid at predict time
     entries["grid_is_estimated"] = True

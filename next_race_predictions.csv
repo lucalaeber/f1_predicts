@@ -1,23 +1,23 @@
 Abbreviation,TeamName,GridPosition,win_prob_pct,grid_is_estimated
-ANT,Mercedes,6.4,28.0,True
-LEC,Ferrari,4.0,26.8,True
-HAM,Ferrari,4.6,15.0,True
-NOR,McLaren,4.8,8.8,True
-VER,Red Bull Racing,4.2,7.8,True
-PIA,McLaren,5.2,7.6,True
-RUS,Mercedes,3.8,5.2,True
-LIN,Racing Bulls,9.0,0.2,True
-LAW,Red Bull Racing,11.6,0.1,True
-GAS,Alpine,9.6,0.1,True
-COL,Alpine,10.8,0.1,True
-TSU,Racing Bulls,13.4,0.0,True
-BOR,Audi,10.6,0.0,True
-HUL,Audi,11.6,0.0,True
-OCO,Haas F1 Team,14.6,0.0,True
-BEA,Haas F1 Team,16.8,0.0,True
-SAI,Williams,17.4,0.0,True
-ALO,Aston Martin,18.8,0.0,True
-ALB,Williams,17.2,0.0,True
-BOT,Cadillac,18.8,0.0,True
-PER,Cadillac,19.4,0.0,True
-STR,Aston Martin,19.6,0.0,True
+RUS,Mercedes,1.0,49.8,False
+LEC,Ferrari,2.0,26.4,False
+ANT,Mercedes,16.0,10.8,False
+HAD,Red Bull Racing,4.0,3.9,False
+PIA,McLaren,3.0,3.5,False
+NOR,McLaren,5.0,2.9,False
+HAM,Ferrari,6.0,1.9,False
+VER,Red Bull Racing,8.0,0.6,False
+GAS,Alpine,7.0,0.1,False
+LAW,Racing Bulls,12.0,0.0,False
+COL,Alpine,10.0,0.0,False
+LIN,Racing Bulls,15.0,0.0,False
+SAI,Williams,9.0,0.0,False
+BEA,Haas F1 Team,11.0,0.0,False
+OCO,Haas F1 Team,14.0,0.0,False
+ALB,Williams,13.0,0.0,False
+HUL,Audi,18.0,0.0,False
+BOR,Audi,17.0,0.0,False
+ALO,Aston Martin,19.0,0.0,False
+PER,Cadillac,20.0,0.0,False
+BOT,Cadillac,22.0,0.0,False
+STR,Aston Martin,21.0,0.0,False
